@@ -70,18 +70,6 @@ public class MenuController {
 
         Menu menu = menuDao.findOne(id);
 
-/*        Cheese cheeseOne = new Cheese("swiss", "holy");
-        Cheese cheeseTwo = new Cheese("gouda", "good");
-        Cheese cheeseThree = new Cheese("blue", "moldy");
-
-        ArrayList<Cheese> cheeses = new ArrayList<>();
-
-        cheeses.add(cheeseOne);
-        cheeses.add(cheeseTwo);
-        cheeses.add(cheeseThree);*/
-
-
-
         AddMenuItemForm addMenuItemForm =  new AddMenuItemForm(menu, cheeseDao.findAll());
         model.addAttribute("form", addMenuItemForm);
         model.addAttribute("title", "Add item to menu: " + menu.getName());
