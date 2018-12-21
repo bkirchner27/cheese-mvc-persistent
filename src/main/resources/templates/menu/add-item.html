@@ -8,7 +8,7 @@
 
         <h1 th:text="${title}">Title</h1>
 
-        <form method="post" style="max-width:600px;" th:object="${form}">
+        <form method="post" style="max-width:600px;" th:object="${form}" action="/menu/add-item">
             <label th:for="cheeseId">Cheese</label>
             <select class="form-control" th:field="*{cheeseId}">
                 <option th:each="cheese : *{cheeses}" th:value="${cheese.id}" th:text="${cheese.name}"></option>
